@@ -2,6 +2,9 @@ I'm going to be putting all of my "training sets" for the `mwcc` 1.2.5 compiler 
 
 # general examples
 
+## 7.c: basic raytracing example
+
+
 
 
 # melee examples
