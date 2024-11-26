@@ -51,8 +51,8 @@ extern M2C_UNK ftDrawCommon_80080E18;
 extern M2C_UNK on_create_fighter;
 
 void *ftDemo_CreateFighter(void *arg0) {
-    s32 sp18;
-    s32 sp14;
+    s32 a;
+    s32 b;
     u8 sp12 = 0;
     u8 sp10;
     s32 spC;
@@ -90,21 +90,22 @@ void *ftDemo_CreateFighter(void *arg0) {
     Fighter_UnkUpdateCostumeJoint_800686E4(temp_r31);
     temp_r3 = M2C_FIELD(arg0, s32 *, 8);
     if (temp_r3 >= 9) {
-      ftData_UnkDemoCallbacks0[M2C_FIELD(temp_r30, s32 *, 4)](&sp18, &sp14);
+      ftData_UnkDemoCallbacks0[M2C_FIELD(temp_r30, s32 *, 4)](&a, &b);
     } else if (temp_r3 >= 8) {
-        sp14 = 0xD;
-        sp18 = 0xD;
+        b = 0xD;
+        a = 0xD;
     } else if (temp_r3 >= 7) {
-        sp14 = 0xC;
-        sp18 = 0xC;
+        b = 0xC;
+        a = 0xC;
     } else if (temp_r3 >= 5) {
-        sp18 = 0xA;
-        sp14 = 0xB;
+        a = 0xA;
+        b = 0xB;
     } else {
-        sp18 = 0;
-        sp14 = 9;
+        a = 0;
+        b = 9;
     }
-    ftData_80085B98(temp_r30, sp18, sp14);
+    ftData_80085B98(temp_r30, a, b);
+    // Looks good to here?
     ftParts_80074E58(temp_r30);
     ftParts_SetupParts(temp_r31);
     ftAnim_80070308(temp_r31);

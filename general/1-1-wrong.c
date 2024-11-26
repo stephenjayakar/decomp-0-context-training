@@ -4,7 +4,7 @@ typedef struct Node {
 } Node;
 
 
-Node nodes[10];
+Node nodes[17];
 int node_count = 0;
 
 
@@ -12,8 +12,8 @@ Node *f1(int data) {
     if (node_count >= 10)
         return 0;
     nodes[node_count].data = data;
-    nodes[node_count].next = 0;
-    return &nodes[node_count++];
+    node_count += 2;
+    return &nodes[node_count];
 }
 
 
