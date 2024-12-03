@@ -1,3 +1,10 @@
+.include "macros.inc"
+.file "temp.c"
+
+# 0x00000000..0x00000278 | size: 0x278
+.text
+.balign 4
+
 .fn ftColl_80076444, global
 /* 80076444 00073024  7C 08 02 A6 */	mflr r0
 /* 80076448 00073028  90 01 00 04 */	stw r0, 0x4(r1)
